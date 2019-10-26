@@ -54,10 +54,10 @@ user content_owner do
 end
 
 # Use the custom site resource to configure the website.
-custom_apache_site site_name do
+custom_apache_site site_name  do
   homepage '<h1>Hello world!</h1>'
 end
-
+custom_apache_site 'apache2'
 # Configure the homepage owner.
 file '/var/www/html/index.html' do
   owner content_owner
